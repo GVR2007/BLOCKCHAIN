@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blockchain Sanitation Framework – Social Acceptance Poster</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green-dark: #0a3d1f;
+    --green-mid: #1a6b3a;
+    --green-accent: #2ecc71;
+    --green-light: #d4f7e0;
+    --earth: #8B5E3C;
+    --earth-light: #f5ede3;
+    --gold: #e6a817;
+    --gold-light: #fef3d0;
+    --blue: #1565c0;
+    --blue-light: #e3f0ff;
+    --teal: #00838f;
+    --teal-light: #e0f7fa;
+    --purple: #6a1b9a;
+    --purple-light: #f3e5f5;
+    --red: #c0392b;
+    --red-light: #fdecea;
+    --orange: #e65100;
+    --orange-light: #fff3e0;
+    --ink: #1a1a2e;
+    --muted: #5a6472;
+    --border: #dde3ea;
+    --surface: #f7f9f4;
+    --white: #ffffff;
+    --shadow: 0 2px 16px rgba(10,61,31,0.08);
+    --shadow-lg: 0 8px 40px rgba(10,61,31,0.13);
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #eef3ea;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+
+  .poster {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: var(--green-dark);
+    color: white;
+    padding: 52px 56px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: rgba(46,204,113,0.07);
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: 200px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(46,204,113,0.05);
+  }
+  .header-tag {
+    display: inline-block;
+    background: var(--green-accent);
+    color: var(--green-dark);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+  }
+  .header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    line-height: 1.2;
+    max-width: 740px;
+    margin-bottom: 16px;
+  }
+  .header h1 em { color: var(--green-accent); font-style: italic; }
+  .header-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.72);
+    max-width: 700px;
+    margin-bottom: 28px;
+    line-height: 1.7;
+  }
+  .header-stats {
+    display: flex;
+    gap: 36px;
+    flex-wrap: wrap;
+  }
+  .hstat { border-left: 3px solid var(--green-accent); padding-left: 14px; }
+  .hstat-num { font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--green-accent); }
+  .hstat-label { font-size: 12px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; }
+
+  /* ── SECTION WRAPPER ── */
+  .section { padding: 48px 56px; border-bottom: 1px solid var(--border); }
+  .section:last-child { border-bottom: none; }
+  .section-alt { background: var(--surface); }
+
+  .section-label {
+    font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--green-mid); margin-bottom: 6px;
+  }
+  .section-title {
+    font-family: 'DM Serif Display', serif; font-size: 28px;
+    color: var(--green-dark); margin-bottom: 10px;
+  }
+  .section-intro {
+    font-size: 15px; color: var(--muted); max-width: 800px;
+    margin-bottom: 32px; line-height: 1.7;
+  }
+
+  /* ── PROBLEM CARDS ── */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .problem-card {
+    background: var(--red-light);
+    border: 1px solid #f5c6c2;
+    border-left: 4px solid var(--red);
+    border-radius: 10px;
+    padding: 18px 20px;
+  }
+  .problem-card .icon { font-size: 22px; margin-bottom: 8px; }
+  .problem-card h4 { font-size: 14px; font-weight: 600; color: var(--red); margin-bottom: 5px; }
+  .problem-card p { font-size: 13px; color: #7a2c24; line-height: 1.55; }
+
+  .solution-bridge {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
+    border-radius: 12px;
+    padding: 24px 28px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .bridge-arrow { font-size: 32px; color: var(--green-accent); }
+  .bridge-text h4 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+  .bridge-text p { font-size: 13px; color: rgba(255,255,255,0.75); }
+
+  /* ── FOUR PILLARS ── */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .pillar {
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+    border: 1px solid transparent;
+  }
+  .pillar.p-green { background: var(--green-light); border-color: #a8dfc0; }
+  .pillar.p-blue  { background: var(--blue-light);  border-color: #b3d1f5; }
+  .pillar.p-teal  { background: var(--teal-light);  border-color: #80deea; }
+  .pillar.p-gold  { background: var(--gold-light);  border-color: #f0d890; }
+
+  .pillar-icon { font-size: 30px; margin-bottom: 10px; }
+  .pillar-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .pillar.p-green .pillar-title { color: var(--green-mid); }
+  .pillar.p-blue  .pillar-title { color: var(--blue); }
+  .pillar.p-teal  .pillar-title { color: var(--teal); }
+  .pillar.p-gold  .pillar-title { color: #a07a10; }
+  .pillar-desc { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+  /* ── FLOW STEPS ── */
+  .flow-container { display: flex; flex-direction: column; gap: 0; }
+  .flow-step {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 0 24px;
+    position: relative;
+  }
+  .flow-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 29px; top: 60px; bottom: 0;
+    width: 2px; background: var(--border); z-index: 0;
+  }
+  .step-num-col {
+    display: flex; flex-direction: column;
+    align-items: center; padding-top: 6px; z-index: 1;
+  }
+  .step-circle {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: var(--green-dark); color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'DM Serif Display', serif; font-size: 20px;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 6px rgba(46,204,113,0.12);
+  }
+  .step-content { padding: 6px 0 40px; }
+  .step-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .step-emoji { font-size: 20px; }
+  .step-title { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--green-dark); }
+  .step-desc { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 16px; max-width: 720px; }
+
+  .step-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+  }
+  .step-box h5 {
+    font-size: 12px; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--green-mid); margin-bottom: 10px;
+  }
+  .step-items { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .step-item {
+    display: flex; align-items: flex-start; gap: 8px;
+    font-size: 13px; color: var(--ink); line-height: 1.5;
+  }
+  .step-item::before {
+    content: '→'; color: var(--green-accent);
+    font-weight: 700; flex-shrink: 0; margin-top: 1px;
+  }
+
+  /* ── FLOWCHART WRAP ── */
+  .flowchart-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 20px;
+    margin: 16px 0;
+    overflow-x: auto;
+  }
+
+  /* ── TECH STACK ── */
+  .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .tech-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative; overflow: hidden;
+  }
+  .tech-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    border-radius: 12px 12px 0 0;
+  }
+  .tech-card.l1::before { background: var(--green-accent); }
+  .tech-card.l2::before { background: var(--gold); }
+  .tech-card.l3::before { background: var(--blue); }
+  .tech-card.l4::before { background: var(--teal); }
+  .tech-card.l5::before { background: var(--purple); }
+  .tech-card.l6::before { background: var(--orange); }
+  .tech-card.l7::before { background: var(--red); }
+
+  .tech-layer { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
+  .tech-card.l1 .tech-layer { color: var(--green-mid); }
+  .tech-card.l2 .tech-layer { color: #a07a10; }
+  .tech-card.l3 .tech-layer { color: var(--blue); }
+  .tech-card.l4 .tech-layer { color: var(--teal); }
+  .tech-card.l5 .tech-layer { color: var(--purple); }
+  .tech-card.l6 .tech-layer { color: var(--orange); }
+  .tech-card.l7 .tech-layer { color: var(--red); }
+
+  .tech-name { font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .tech-desc { font-size: 12px; color: var(--muted); line-height: 1.55; }
+  .tech-code {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 4px; padding: 2px 7px;
+    color: var(--green-mid); margin-top: 8px;
+  }
+
+  /* ── SOCIAL ACCEPTANCE TABLE ── */
+  .sa-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .sa-table th {
+    background: var(--green-dark); color: white;
+    padding: 10px 16px; text-align: left;
+    font-weight: 500; font-size: 12px; letter-spacing: 0.5px;
+  }
+  .sa-table th:first-child { border-radius: 8px 0 0 0; }
+  .sa-table th:last-child { border-radius: 0 8px 0 0; }
+  .sa-table td { padding: 10px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .sa-table tr:last-child td { border-bottom: none; }
+  .sa-table tr:nth-child(even) td { background: var(--surface); }
+  .barrier-pill {
+    display: inline-block; background: var(--red-light);
+    color: var(--red); font-size: 11px; font-weight: 600;
+    padding: 2px 9px; border-radius: 20px; border: 1px solid #f5c6c2;
+  }
+  .solution-pill {
+    display: inline-block; background: var(--green-light);
+    color: var(--green-mid); font-size: 11px; font-weight: 600;
+    padding: 2px 9px; border-radius: 20px; border: 1px solid #a8dfc0;
+  }
+
+  /* ── ROADMAP ── */
+  .roadmap-phases { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-bottom: 24px; }
+  .phase { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+  .phase-head {
+    padding: 10px 12px; color: white;
+    font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+  }
+  .phase.p1 .phase-head { background: #1565c0; }
+  .phase.p2 .phase-head { background: #2e7d32; }
+  .phase.p3 .phase-head { background: #e65100; }
+  .phase.p4 .phase-head { background: #6a1b9a; }
+  .phase.p5 .phase-head { background: #00838f; }
+  .phase.p6 .phase-head { background: #4e342e; }
+  .phase-body { padding: 10px 12px; background: var(--white); }
+  .phase-months { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); margin-bottom: 6px; }
+  .phase-tasks { list-style: none; }
+  .phase-tasks li {
+    font-size: 11px; color: var(--ink);
+    padding: 2px 0 2px 12px; position: relative; line-height: 1.5;
+  }
+  .phase-tasks li::before {
+    content: '·'; position: absolute; left: 3px;
+    color: var(--green-accent); font-weight: 700; font-size: 16px; top: -1px;
+  }
+
+  /* ── IMPACT ── */
+  .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
+  .impact-card { border-radius: 12px; padding: 22px 18px; text-align: center; }
+  .impact-card.green { background: var(--green-light); border: 1px solid #a8dfc0; }
+  .impact-card.gold  { background: var(--gold-light);  border: 1px solid #f0d890; }
+  .impact-card.blue  { background: var(--blue-light);  border: 1px solid #b3d1f5; }
+  .impact-card.teal  { background: var(--teal-light);  border: 1px solid #80deea; }
+  .impact-num { font-family: 'DM Serif Display', serif; font-size: 32px; margin-bottom: 4px; }
+  .impact-card.green .impact-num { color: var(--green-mid); }
+  .impact-card.gold  .impact-num { color: #a07a10; }
+  .impact-card.blue  .impact-num { color: var(--blue); }
+  .impact-card.teal  .impact-num { color: var(--teal); }
+  .impact-label { font-size: 12px; font-weight: 600; margin-bottom: 4px; }
+  .impact-sub { font-size: 11px; color: var(--muted); line-height: 1.4; }
+
+  /* ── MISC ── */
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .chip {
+    background: var(--green-light); color: var(--green-mid);
+    font-size: 11px; font-weight: 600; letter-spacing: 0.5px;
+    padding: 4px 12px; border-radius: 20px; border: 1px solid #a8dfc0;
+  }
+  .quote-block {
+    border-left: 4px solid var(--green-accent);
+    background: var(--green-light);
+    border-radius: 0 10px 10px 0;
+    padding: 16px 20px; margin: 20px 0;
+  }
+  .quote-block p { font-size: 14px; color: var(--green-dark); font-style: italic; line-height: 1.6; }
+  .quote-block cite { font-size: 12px; color: var(--green-mid); font-style: normal; margin-top: 6px; display: block; }
+  .callout {
+    background: var(--gold-light); border: 1px solid #f0d890;
+    border-radius: 10px; padding: 14px 18px;
+    font-size: 13px; color: #7a5c10; line-height: 1.6; margin: 16px 0;
+  }
+  .callout strong { color: #5a4010; }
+  .info-callout {
+    background: var(--blue-light); border: 1px solid #b3d1f5;
+    border-radius: 10px; padding: 14px 18px;
+    font-size: 13px; color: #0d3f7a; line-height: 1.6; margin: 16px 0;
+  }
+  .info-callout strong { color: #0a2d5a; }
+  .teal-callout {
+    background: var(--teal-light); border: 1px solid #80deea;
+    border-radius: 10px; padding: 14px 18px;
+    font-size: 13px; color: #004d59; line-height: 1.6; margin: 16px 0;
+  }
+  .teal-callout strong { color: #003840; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+  .footer {
+    background: var(--green-dark); color: rgba(255,255,255,0.6);
+    padding: 24px 56px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px;
+  }
+  .footer strong { color: white; }
+</style>
+</head>
+<body>
+<div class="poster">
+
+<!-- ═══════════ HEADER ═══════════ -->
+<div class="header">
+  <div class="header-tag">Research Framework · Social Acceptance &amp; Behavioral Change</div>
+  <h1>Blockchain-Enabled Monitoring &amp; Incentive Framework for <em>Sustainable Sanitation</em> to Enhance Social Acceptance</h1>
+  <p class="header-sub">A complete beginner-friendly explanation of how blockchain-backed rewards, transparent monitoring, water-efficient design, and community accountability can close the gap between sanitation infrastructure availability and actual household usage — particularly in water-scarce regions of India.</p>
+  <div class="header-stats">
+    <div class="hstat"><div class="hstat-num">3.5B+</div><div class="hstat-label">Lack safe sanitation worldwide</div></div>
+    <div class="hstat"><div class="hstat-num">600M+</div><div class="hstat-label">Practice open defecation in India</div></div>
+    <div class="hstat"><div class="hstat-num">4</div><div class="hstat-label">Core pillars of the framework</div></div>
+    <div class="hstat"><div class="hstat-num">6</div><div class="hstat-label">Barrier types addressed</div></div>
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 1: THE PROBLEM ═══════════ -->
+<div class="section section-alt">
+  <div class="section-label">Section 01</div>
+  <div class="section-title">Why Don't People Use the Toilets That Are Already Built?</div>
+  <p class="section-intro">India's Swachh Bharat Mission and Nirmal Bharat Abhiyan constructed millions of toilets. But construction alone does not equal usage. Field observations reveal that toilets remain underutilized not just because of habit — but because of a complex mix of <strong>practical, infrastructural, and behavioral barriers</strong>. The new abstract identifies six distinct root causes:</p>
+
+  <div class="problem-grid">
+    <div class="problem-card">
+      <div class="icon">💧</div>
+      <h4>Water scarcity reduces willingness to use toilets</h4>
+      <p>In water-scarce areas, households prioritize drinking and cooking over flushing. Every litre used for sanitation feels like a sacrifice. Traditional open defecation requires zero water — making it feel more "efficient" in resource-stressed conditions.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">📐</div>
+      <h4>Poor toilet design and insufficient space</h4>
+      <p>Many government-built toilets have cramped interiors, inadequate ventilation, no water storage provisions, and layouts that don't match how local families actually use sanitation. Structural issues make them uncomfortable or even unusable for many.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">🔧</div>
+      <h4>Irregular maintenance and structural deficiencies</h4>
+      <p>Once built, many toilets receive no follow-up maintenance. Cracked walls, broken doors, blocked pits, and absent lighting are common. A dysfunctional toilet quickly becomes abandoned, reinforcing the preference for open defecation.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">🧠</div>
+      <h4>Existing open defecation habits are deeply ingrained</h4>
+      <p>Behavioral change is slow. Decades of outdoor defecation create strong habits tied to social routines (group outings, early morning customs). These are not easily broken by infrastructure alone — behavior change needs active, sustained motivation.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">🪞</div>
+      <h4>Perceptions of cleanliness favor the outdoors</h4>
+      <p>Paradoxically, many rural households perceive the open field as cleaner than an enclosed toilet. Fear of smell, flies, and enclosed spaces — combined with the idea that defecating near the home is unclean — creates a perception barrier that policy alone cannot fix.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">📚</div>
+      <h4>Limited awareness of long-term health benefits</h4>
+      <p>Without regular health education, communities don't connect open defecation to diarrhea, cholera, typhoid, and stunting in children. The long-term health cost is invisible; the short-term convenience of open defecation feels immediate and real.</p>
+    </div>
+  </div>
+
+  <div class="solution-bridge">
+    <div class="bridge-arrow">→</div>
+    <div class="bridge-text">
+      <h4>This framework addresses all six barriers simultaneously through four integrated pillars</h4>
+      <p>Behavioral incentives (tokens) tackle motivation. Maintenance reporting tackles infrastructure. Water-efficient design guidance tackles scarcity. Community tracking tackles social norms. Blockchain ensures all of it is transparent and tamper-proof.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 2: FOUR PILLARS ═══════════ -->
+<div class="section">
+  <div class="section-label">Section 02</div>
+  <div class="section-title">The Four Pillars of the Framework</div>
+  <p class="section-intro">Unlike previous approaches that focused only on building toilets or only on awareness campaigns, this framework operates on four simultaneous pillars — each targeting a different type of barrier. All four are connected through the blockchain backbone.</p>
+
+  <div class="pillars-grid">
+    <div class="pillar p-green">
+      <div class="pillar-icon">🪙</div>
+      <div class="pillar-title">Behavioral Incentives</div>
+      <div class="pillar-desc">Digital token rewards for regular, verified toilet usage. Immediate, tangible benefit that shifts the cost-benefit calculation away from open defecation toward consistent sanitation facility use.</div>
+    </div>
+    <div class="pillar p-blue">
+      <div class="pillar-icon">⛓</div>
+      <div class="pillar-title">Transparent Monitoring</div>
+      <div class="pillar-desc">All usage data and resource recovery metrics recorded on blockchain — tamper-proof, real-time, and accessible to government, community leaders, and households themselves. No fake reports possible.</div>
+    </div>
+    <div class="pillar p-teal">
+      <div class="pillar-icon">💧</div>
+      <div class="pillar-title">Water-Efficient Sanitation</div>
+      <div class="pillar-desc">Guidance and design support for low-flush, pour-flush, and dry sanitation options that drastically reduce water needed per use. The system rewards water-efficient practices, removing the scarcity burden.</div>
+    </div>
+    <div class="pillar p-gold">
+      <div class="pillar-icon">🏘</div>
+      <div class="pillar-title">Community Accountability</div>
+      <div class="pillar-desc">Village-level dashboards show community performance rankings, maintenance alerts, and collective progress toward ODF targets. Peer visibility creates social motivation and collective ownership of sanitation outcomes.</div>
+    </div>
+  </div>
+
+  <div class="info-callout">
+    <strong>🔑 Why social acceptance is the key focus:</strong> Previous frameworks treated sanitation as an engineering problem. This framework treats it as a <em>social acceptance problem</em>. A toilet is only useful when people choose to use it voluntarily, consistently, and with dignity. The blockchain reward system makes that choice feel rewarding rather than burdensome — turning a public health imperative into a personally beneficial habit.
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 3: BIG PICTURE FLOWCHART ═══════════ -->
+<div class="section section-alt">
+  <div class="section-label">Section 03</div>
+  <div class="section-title">Complete System Flow — How Everything Connects</div>
+  <p class="section-intro">Here is the entire framework as one connected flow. Notice that there are now <strong>two input paths to the blockchain</strong>: toilet usage + resource recovery (as in the original) AND the new maintenance reporting + community tracking features. Both feed into the same transparent ledger and the same reward system.</p>
+
+  <div class="flowchart-wrap">
+    <svg width="100%" viewBox="0 0 980 500" xmlns="http://www.w3.org/2000/svg" font-family="DM Sans, sans-serif">
+      <defs>
+        <marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M1 2L8 5L1 8" fill="none" stroke="#2ecc71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </marker>
+        <marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M1 2L8 5L1 8" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </marker>
+        <marker id="at" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M1 2L8 5L1 8" fill="none" stroke="#00838f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </marker>
+        <marker id="ad" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M1 2L8 5L1 8" fill="none" stroke="#0a3d1f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </marker>
+      </defs>
+
+      <!-- ── ROW 1: THREE INPUT STREAMS ── -->
+      <!-- Stream A: Toilet Usage -->
+      <rect x="10" y="20" width="160" height="66" rx="10" fill="#d4f7e0" stroke="#2ecc71" stroke-width="1.5"/>
+      <text x="90" y="46" text-anchor="middle" font-size="11" font-weight="600" fill="#0a3d1f">🏠 Toilet Usage</text>
+      <text x="90" y="62" text-anchor="middle" font-size="10" fill="#1a6b3a">IoT sensors verify</text>
+      <text x="90" y="76" text-anchor="middle" font-size="10" fill="#1a6b3a">each usage event</text>
+
+      <!-- Stream B: Resource Recovery -->
+      <rect x="190" y="20" width="160" height="66" rx="10" fill="#fef3d0" stroke="#e6a817" stroke-width="1.5"/>
+      <text x="270" y="46" text-anchor="middle" font-size="11" font-weight="600" fill="#a07a10">♻ Resource Recovery</text>
+      <text x="270" y="62" text-anchor="middle" font-size="10" fill="#a07a10">Biogas + fertilizer</text>
+      <text x="270" y="76" text-anchor="middle" font-size="10" fill="#a07a10">yield measured</text>
+
+      <!-- NEW Stream C: Maintenance Reports -->
+      <rect x="370" y="20" width="160" height="66" rx="10" fill="#e0f7fa" stroke="#00838f" stroke-width="1.5"/>
+      <text x="450" y="46" text-anchor="middle" font-size="11" font-weight="600" fill="#004d59">🔧 Maintenance Reports</text>
+      <text x="450" y="62" text-anchor="middle" font-size="10" fill="#004d59">Households log issues;</text>
+      <text x="450" y="76" text-anchor="middle" font-size="10" fill="#004d59">repairs verified on-chain</text>
+
+      <!-- NEW Stream D: Community Tracking -->
+      <rect x="550" y="20" width="160" height="66" rx="10" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1.5"/>
+      <text x="630" y="46" text-anchor="middle" font-size="11" font-weight="600" fill="#4a148c">🏘 Community Tracking</text>
+      <text x="630" y="62" text-anchor="middle" font-size="10" fill="#4a148c">Village-level ODF score</text>
+      <text x="630" y="76" text-anchor="middle" font-size="10" fill="#4a148c">updated in real time</text>
+
+      <!-- Stream E: Water Efficiency -->
+      <rect x="730" y="20" width="160" height="66" rx="10" fill="#e3f0ff" stroke="#1565c0" stroke-width="1.5"/>
+      <text x="810" y="46" text-anchor="middle" font-size="11" font-weight="600" fill="#1565c0">💧 Water Efficiency</text>
+      <text x="810" y="62" text-anchor="middle" font-size="10" fill="#1565c0">Low-flush sensor tracks</text>
+      <text x="810" y="76" text-anchor="middle" font-size="10" fill="#1565c0">water saved per use</text>
+
+      <!-- Arrows to blockchain -->
+      <line x1="90"  y1="86" x2="460" y2="155" stroke="#2ecc71" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ag)"/>
+      <line x1="270" y1="86" x2="466" y2="155" stroke="#e6a817" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ag)"/>
+      <line x1="450" y1="86" x2="472" y2="155" stroke="#00838f" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#at)"/>
+      <line x1="630" y1="86" x2="476" y2="155" stroke="#6a1b9a" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ag)"/>
+      <line x1="810" y1="86" x2="480" y2="155" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ab)"/>
+
+      <!-- ── BLOCKCHAIN NODE (centre) ── -->
+      <rect x="360" y="158" width="230" height="76" rx="12" fill="#0a3d1f"/>
+      <text x="475" y="186" text-anchor="middle" font-size="13" font-weight="600" fill="white">⛓ Blockchain Ledger</text>
+      <text x="475" y="204" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.8)">All data written as tamper-proof blocks</text>
+      <text x="475" y="220" text-anchor="middle" font-size="10" fill="#2ecc71">Transparent · Immutable · Real-time</text>
+
+      <!-- Arrow: Blockchain → Smart Contract -->
+      <line x1="475" y1="234" x2="475" y2="272" stroke="#2ecc71" stroke-width="2" marker-end="url(#ag)"/>
+
+      <!-- ── SMART CONTRACT ── -->
+      <rect x="360" y="274" width="230" height="66" rx="10" fill="#fef3d0" stroke="#e6a817" stroke-width="1.5"/>
+      <text x="475" y="299" text-anchor="middle" font-size="12" font-weight="600" fill="#a07a10">📜 Smart Contract</text>
+      <text x="475" y="315" text-anchor="middle" font-size="10" fill="#a07a10">Calculates tokens: usage + water saved</text>
+      <text x="475" y="329" text-anchor="middle" font-size="10" fill="#a07a10">+ resource recovery + maintenance bonus</text>
+
+      <!-- Arrow: Smart Contract → Wallet -->
+      <line x1="475" y1="340" x2="475" y2="378" stroke="#2ecc71" stroke-width="2" marker-end="url(#ag)"/>
+
+      <!-- ── TOKEN WALLET ── -->
+      <rect x="340" y="380" width="270" height="66" rx="10" fill="#d4f7e0" stroke="#2ecc71" stroke-width="2"/>
+      <text x="475" y="406" text-anchor="middle" font-size="12" font-weight="600" fill="#0a3d1f">🪙 Household Token Wallet (GT)</text>
+      <text x="475" y="422" text-anchor="middle" font-size="10" fill="#1a6b3a">Mobile app · Redeem at ration shops, LPG,</text>
+      <text x="475" y="436" text-anchor="middle" font-size="10" fill="#1a6b3a">school fees, health services, subsidies</text>
+
+      <!-- Government portal (right side) -->
+      <rect x="730" y="274" width="200" height="66" rx="10" fill="#e3f0ff" stroke="#1565c0" stroke-width="1.5"/>
+      <text x="830" y="299" text-anchor="middle" font-size="11" font-weight="600" fill="#1565c0">🏛 Govt. Dashboard</text>
+      <text x="830" y="315" text-anchor="middle" font-size="10" fill="#1565c0">Village-wise ODF scores</text>
+      <text x="830" y="329" text-anchor="middle" font-size="10" fill="#1565c0">maintenance alerts, usage maps</text>
+      <line x1="590" y1="196" x2="730" y2="300" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ab)"/>
+
+      <!-- Community dashboard (left side) -->
+      <rect x="50" y="274" width="200" height="66" rx="10" fill="#e0f7fa" stroke="#00838f" stroke-width="1.5"/>
+      <text x="150" y="299" text-anchor="middle" font-size="11" font-weight="600" fill="#004d59">📊 Community Board</text>
+      <text x="150" y="315" text-anchor="middle" font-size="10" fill="#004d59">Village rankings, peer scores</text>
+      <text x="150" y="329" text-anchor="middle" font-size="10" fill="#004d59">collective ODF progress</text>
+      <line x1="360" y1="196" x2="250" y2="300" stroke="#00838f" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#at)"/>
+
+      <!-- Feedback loop arrow -->
+      <path d="M475 446 Q475 490 200 490 Q30 490 30 380 Q30 340 50 307" fill="none" stroke="#0a3d1f" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#ad)"/>
+      <text x="200" y="484" text-anchor="middle" font-size="10" fill="#0a3d1f" font-weight="600">♻ Tokens → more usage → more recovery → more tokens (self-reinforcing loop)</text>
+    </svg>
+  </div>
+
+  <div class="callout">
+    <strong>🆕 What's new in this version vs. the original framework:</strong> The original framework focused primarily on resource recovery (biogas/fertilizer) as the incentive source. The updated framework elevates <strong>social acceptance</strong> as the central goal and adds three new data inputs: (1) maintenance reporting so broken toilets get fixed fast, (2) water efficiency tracking so water-scarce households feel the system works for them, and (3) community-level performance boards that create peer motivation and collective accountability.
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 4: BARRIER → SOLUTION MAP ═══════════ -->
+<div class="section">
+  <div class="section-label">Section 04</div>
+  <div class="section-title">Barrier-to-Solution Mapping — How Each Problem Is Solved</div>
+  <p class="section-intro">This is the most important table in the poster. For each barrier identified in field observations, here is exactly what the framework does to address it — and which pillar of the system handles it.</p>
+
+  <table class="sa-table">
+    <thead>
+      <tr>
+        <th style="width:22%">Barrier (Root Cause)</th>
+        <th style="width:18%">Who It Affects</th>
+        <th style="width:32%">Framework Response</th>
+        <th style="width:18%">Pillar</th>
+        <th style="width:10%">Measurable Output</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="barrier-pill">💧 Water scarcity</span><br><br>Households won't "waste" water on flushing</td>
+        <td style="font-size:12px;">Dryland regions, semi-arid villages, areas with seasonal water supply</td>
+        <td style="font-size:12px;">System promotes <strong>low-flush/pour-flush/dry-pit options</strong>. Water-efficiency sensor tracks litres saved per use. Bonus tokens awarded for water-saving toilet use. Design guidelines for rainwater-harvesting integration provided to panchayat.</td>
+        <td><span class="solution-pill">💧 Water Efficiency</span></td>
+        <td style="font-size:12px;">Litres saved/day, water-efficiency score on blockchain</td>
+      </tr>
+      <tr>
+        <td><span class="barrier-pill">📐 Poor design</span><br><br>Cramped space, no water supply, unusable layout</td>
+        <td style="font-size:12px;">All users, especially women, elderly, people with disabilities</td>
+        <td style="font-size:12px;"><strong>Household maintenance reporting feature</strong> in app allows residents to photograph and log design issues. These are timestamped on-chain and automatically escalated to panchayat/contractor. Resolution is verified by community volunteer before complaint is closed.</td>
+        <td><span class="solution-pill">🔧 Maintenance</span></td>
+        <td style="font-size:12px;">Issue resolution time, complaint log count, verified fix rate</td>
+      </tr>
+      <tr>
+        <td><span class="barrier-pill">🔧 Maintenance neglect</span><br><br>Broken, dirty, or non-functional toilets</td>
+        <td style="font-size:12px;">All households, particularly those where toilets were built but never maintained</td>
+        <td style="font-size:12px;"><strong>Periodic inspection reminders</strong> sent via app to households and local health workers. Households earn tokens for logging maintenance checks. Community-level maintenance score is visible to all — creating accountability pressure on panchayat to fix reported issues promptly.</td>
+        <td><span class="solution-pill">🏘 Community</span></td>
+        <td style="font-size:12px;">Maintenance score, average days-to-fix, inspection frequency</td>
+      </tr>
+      <tr>
+        <td><span class="barrier-pill">🧠 Ingrained OD habits</span><br><br>Decades of open defecation as daily routine</td>
+        <td style="font-size:12px;">Adults, especially men; communities where OD is a social activity</td>
+        <td style="font-size:12px;"><strong>Daily usage verification</strong> via IoT sensor triggers token reward immediately — creating a positive reinforcement loop. Streak bonuses (7-day, 30-day) mimic gamification. Village ODF score visible to all residents creates social pressure to participate. Community rewards (e.g., school upgrade fund) tied to village-wide performance.</td>
+        <td><span class="solution-pill">🪙 Incentive</span></td>
+        <td style="font-size:12px;">Daily usage rate, streak adoption, ODF status duration</td>
+      </tr>
+      <tr>
+        <td><span class="barrier-pill">🪞 Cleanliness perception</span><br><br>Toilets perceived as dirtier than outdoors</td>
+        <td style="font-size:12px;">Women and elderly particularly affected by perception of enclosed spaces</td>
+        <td style="font-size:12px;"><strong>App-based hygiene scoring</strong> for each toilet (based on maintenance logs + self-reported cleanliness checks). Households with high hygiene scores earn bonus tokens and are featured on the community leaderboard. This reframes toilet cleanliness as something households take pride in, not something imposed from outside.</td>
+        <td><span class="solution-pill">🏘 Community</span></td>
+        <td style="font-size:12px;">Hygiene score, self-reported cleanliness frequency</td>
+      </tr>
+      <tr>
+        <td><span class="barrier-pill">📚 Low health awareness</span><br><br>No visible link between OD and illness</td>
+        <td style="font-size:12px;">All community members; children especially at risk from OD-related disease</td>
+        <td style="font-size:12px;"><strong>In-app health education modules</strong> (audio + visual, available in Tamil/Telugu). Completing a module earns small token reward. Village health worker can push local outbreak alerts via the same platform. Blockchain-stored health data (aggregated, anonymous) helps government correlate sanitation usage with health outcomes over time.</td>
+        <td><span class="solution-pill">⛓ Monitoring</span></td>
+        <td style="font-size:12px;">Module completion rate, health-literacy score, disease incidence correlation</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════════ SECTION 5: STEP-BY-STEP HOW IT WORKS ═══════════ -->
+<div class="section section-alt">
+  <div class="section-label">Section 05</div>
+  <div class="section-title">Step-by-Step: How the System Works in Daily Life</div>
+  <p class="section-intro">Forget the technology for a moment. Imagine you are a household in a rural village. Here is exactly what your day looks like — and where the system touches your life.</p>
+
+  <div class="flow-container">
+
+    <!-- STEP 1 -->
+    <div class="flow-step">
+      <div class="step-num-col"><div class="step-circle">1</div></div>
+      <div class="step-content">
+        <div class="step-header"><span class="step-emoji">🌅</span><span class="step-title">Morning: A Family Member Uses the Toilet</span></div>
+        <p class="step-desc">
+          A household member walks to the toilet. The toilet has a small IoT sensor attached (looks like a smoke detector). As the toilet is used, the sensor detects the usage event — either through a flow meter (water usage), a door-open/close sensor, or a weight plate trigger. The usage is logged with a timestamp and the household's unique ID. Crucially, in water-scarce homes, the system is configured for <strong>low-flush or pour-flush toilets</strong> — needing as little as 1–2 litres per use vs. 6–10 litres for a regular flush toilet.
+        </p>
+        <div class="flowchart-wrap">
+          <svg width="100%" viewBox="0 0 860 140" xmlns="http://www.w3.org/2000/svg" font-family="DM Sans, sans-serif">
+            <defs>
+              <marker id="as1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <path d="M1 2L8 5L1 8" fill="none" stroke="#2ecc71" stroke-width="1.5" stroke-linecap="round"/>
+              </marker>
+            </defs>
+            <rect x="10"  y="30" width="155" height="70" rx="8" fill="#d4f7e0" stroke="#2ecc71" stroke-width="1.5"/>
+            <text x="88"  y="56" text-anchor="middle" font-size="11" font-weight="600" fill="#0a3d1f">🚽 Toilet Used</text>
+            <text x="88"  y="72" text-anchor="middle" font-size="10" fill="#1a6b3a">Low-flush / pour-flush</text>
+            <text x="88"  y="86" text-anchor="middle" font-size="10" fill="#1a6b3a">1–2 litres of water</text>
+            <line x1="165" y1="65" x2="205" y2="65" stroke="#2ecc71" stroke-width="2" marker-end="url(#as1)"/>
+
+            <rect x="207" y="30" width="155" height="70" rx="8" fill="#e3f0ff" stroke="#1565c0" stroke-width="1.5"/>
+            <text x="285" y="56" text-anchor="middle" font-size="11" font-weight="600" fill="#1565c0">📡 Sensor Detects</text>
+            <text x="285" y="72" text-anchor="middle" font-size="10" fill="#1565c0">Usage event + water</text>
+            <text x="285" y="86" text-anchor="middle" font-size="10" fill="#1565c0">volume measured</text>
+            <line x1="362" y1="65" x2="402" y2="65" stroke="#2ecc71" stroke-width="2" marker-end="url(#as1)"/>
+
+            <rect x="404" y="30" width="155" height="70" rx="8" fill="#f5ede3" stroke="#8B5E3C" stroke-width="1.5"/>
+            <text x="482" y="56" text-anchor="middle" font-size="11" font-weight="600" fill="#8B5E3C">📤 Data Packaged</text>
+            <text x="482" y="72" text-anchor="middle" font-size="10" fill="#8B5E3C">JSON: HH_ID, timestamp,</text>
+            <text x="482" y="86" text-anchor="middle" font-size="10" fill="#8B5E3C">litres, GPS, sensor OK</text>
+            <line x1="559" y1="65" x2="599" y2="65" stroke="#2ecc71" stroke-width="2" marker-end="url(#as1)"/>
+
+            <rect x="601" y="30" width="155" height="70" rx="8" fill="#0a3d1f"/>
+            <text x="679" y="56" text-anchor="middle" font-size="11" font-weight="600" fill="white">⛓ Block Written</text>
+            <text x="679" y="72" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.8)">Permanent record</text>
+            <text x="679" y="86" text-anchor="middle" font-size="10" fill="#2ecc71">Cannot be changed</text>
+            <line x1="756" y1="65" x2="796" y2="65" stroke="#2ecc71" stroke-width="2" marker-end="url(#as1)"/>
+
+            <rect x="798" y="40" width="52" height="50" rx="8" fill="#d4f7e0" stroke="#2ecc71" stroke-width="1.5"/>
+            <text x="824" y="62" text-anchor="middle" font-size="11" font-weight="600" fill="#0a3d1f">+5</text>
+            <text x="824" y="78" text-anchor="middle" font-size="10" fill="#1a6b3a">GT</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="flow-step">
+      <div class="step-num-col"><div class="step-circle">2</div></div>
+      <div class="step-content">
+        <div class="step-header"><span class="step-emoji">🔧</span><span class="step-title">Any Time: Reporting a Toilet Issue via the App</span></div>
+        <p class="step-desc">
+          If the toilet door hinge breaks, the pit is full, or the roof leaks — the household opens the app, takes a photo, taps the issue type, and submits. The report is <strong>written to the blockchain</strong> with a timestamp. The panchayat officer gets an automatic notification. A community health volunteer is dispatched to verify the issue. Once the repair is done and the volunteer marks it resolved on-chain, the household earns a "maintenance participation" token bonus. The whole process is traceable — nobody can claim a repair happened if it didn't.
+        </p>
+        <div class="step-box">
+          <h5>Maintenance reporting flow</h5>
+          <div class="step-items">
+            <div class="step-item">Household opens app → taps "Report Issue" → selects category (structural / water / cleanliness / other)</div>
+            <div class="step-item">Photo upload + optional voice note → auto-tagged with GPS + household ID → written to blockchain</div>
+            <div class="step-item">Panchayat dashboard shows alert → assigns repair team → deadline set (3 days)</div>
+            <div class="step-item">Repair completed → community volunteer verifies on-app → blockchain entry: "Resolved"</div>
+            <div class="step-item">Household earns 15 GT bonus for participating → panchayat scored on resolution time</div>
+            <div class="step-item">Unresolved issues escalate automatically to block/district level after deadline</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="flow-step">
+      <div class="step-num-col"><div class="step-circle">3</div></div>
+      <div class="step-content">
+        <div class="step-header"><span class="step-emoji">🏘</span><span class="step-title">Weekly: Community Leaderboard Updates</span></div>
+        <p class="step-desc">
+          Every week, the system calculates a <strong>village-level ODF score</strong> — a composite of average toilet usage rate, maintenance responsiveness, water efficiency, and health module completion. This score is displayed on a public notice board (printed weekly by the gram panchayat) AND in the app. Villages that cross the 90% usage threshold get a <strong>community reward</strong> — a shared fund that the village can vote to spend on a public good (clean water point, school supplies, streetlight). This makes sanitation a community achievement, not just a household chore.
+        </p>
+        <div class="teal-callout">
+          <strong>Why community scoring works:</strong> Research in CLTS (Community-Led Total Sanitation) shows that peer visibility is one of the most powerful triggers for behavior change in rural India. When a household knows that their neighbor can see their village's score dropping because of OD, social pressure activates. This framework automates that visibility and makes it positive and rewarding — rather than shaming.
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="flow-step">
+      <div class="step-num-col"><div class="step-circle">4</div></div>
+      <div class="step-content">
+        <div class="step-header"><span class="step-emoji">📜</span><span class="step-title">Automatic: Smart Contract Calculates and Issues Tokens</span></div>
+        <p class="step-desc">
+          Every night at midnight, the smart contract runs automatically. It reads all usage events, water-efficiency readings, maintenance reports submitted, and health module completions from the day. Using a pre-set formula (coded in Solidity, audited and locked — nobody can change it), it calculates each household's token earnings and sends them directly to their wallet. No human approves it. No official can delay it. No corruption is possible.
+        </p>
+        <div class="flowchart-wrap">
+          <svg width="100%" viewBox="0 0 840 180" xmlns="http://www.w3.org/2000/svg" font-family="DM Sans, sans-serif">
+            <defs>
+              <marker id="as4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <path d="M1 2L8 5L1 8" fill="none" stroke="#e6a817" stroke-width="1.5" stroke-linecap="round"/>
+              </marker>
+            </defs>
+            <!-- Inputs -->
+            <rect x="10" y="10" width="130" height="44" rx="7" fill="#d4f7e0" stroke="#2ecc71" stroke-width="1"/>
+            <text x="75" y="28" text-anchor="middle" font-size="10" fill="#0a3d1f" font-weight="600">Toilet usage events</text>
+            <text x="75" y="44" text-anchor="middle" font-size="9" fill="#1a6b3a">volume + frequency</text>
+
+            <rect x="10" y="68" width="130" height="44" rx="7" fill="#e0f7fa" stroke="#00838f" stroke-width="1"/>
+            <text x="75" y="86" text-anchor="middle" font-size="10" fill="#004d59" font-weight="600">Water saved (litres)</text>
+            <text x="75" y="102" text-anchor="middle" font-size="9" fill="#004d59">vs. standard flush</text>
+
+            <rect x="10" y="126" width="130" height="44" rx="7" fill="#fef3d0" stroke="#e6a817" stroke-width="1"/>
+            <text x="75" y="144" text-anchor="middle" font-size="10" fill="#a07a10" font-weight="600">Resource recovery</text>
+            <text x="75" y="160" text-anchor="middle" font-size="9" fill="#a07a10">biogas + bioslurry</text>
+
+            <!-- Arrows to contract -->
+            <line x1="140" y1="32"  x2="220" y2="88" stroke="#e6a817" stroke-width="1.5" marker-end="url(#as4)"/>
+            <line x1="140" y1="90"  x2="220" y2="90" stroke="#e6a817" stroke-width="1.5" marker-end="url(#as4)"/>
+            <line x1="140" y1="148" x2="220" y2="92" stroke="#e6a817" stroke-width="1.5" marker-end="url(#as4)"/>
+
+            <!-- Smart contract box -->
+            <rect x="222" y="52" width="200" height="76" rx="10" fill="#0a3d1f"/>
+            <text x="322" y="78" text-anchor="middle" font-size="12" font-weight="600" fill="white">📜 Smart Contract</text>
+            <text x="322" y="96" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.8)">Formula: (Usage × 2) + (Water</text>
+            <text x="322" y="110" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.8)">Saved × 0.5) + Bonuses</text>
+            <text x="322" y="122" text-anchor="middle" font-size="10" fill="#2ecc71">Runs daily at midnight, auto</text>
+
+            <!-- Maintenance + health on right side of contract -->
+            <rect x="600" y="10" width="130" height="44" rx="7" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1"/>
+            <text x="665" y="28" text-anchor="middle" font-size="10" fill="#4a148c" font-weight="600">Maintenance report</text>
+            <text x="665" y="44" text-anchor="middle" font-size="9" fill="#4a148c">submitted this day</text>
+
+            <rect x="600" y="68" width="130" height="44" rx="7" fill="#e3f0ff" stroke="#1565c0" stroke-width="1"/>
+            <text x="665" y="86" text-anchor="middle" font-size="10" fill="#1565c0" font-weight="600">Health module</text>
+            <text x="665" y="102" text-anchor="middle" font-size="9" fill="#1565c0">completed today</text>
+
+            <rect x="600" y="126" width="130" height="44" rx="7" fill="#d4f7e0" stroke="#2ecc71" stroke-width="1"/>
+            <text x="665" y="144" text-anchor="middle" font-size="10" fill="#0a3d1f" font-weight="600">Streak bonus</text>
+            <text x="665" y="160" text-anchor="middle" font-size="9" fill="#1a6b3a">7 / 30 / 90 days</text>
+
+            <line x1="600" y1="32"  x2="422" y2="88" stroke="#e6a817" stroke-width="1.5" marker-end="url(#as4)"/>
+            <line x1="600" y1="90"  x2="422" y2="90" stroke="#e6a817" stroke-width="1.5" marker-end="url(#as4)"/>
+            <line x1="600" y1="148" x2="422" y2="92" stroke="#e6a817" stroke-width="1.5" marker-end="url(#as4)"/>
+
+            <!-- Output arrow -->
+            <line x1="422" y1="90" x2="500" y2="90" stroke="#e6a817" stroke-width="2" marker-end="url(#as4)"/>
+
+            <!-- GT pill -->
+            <rect x="502" y="62" width="90" height="56" rx="10" fill="#d4f7e0" stroke="#2ecc71" stroke-width="2"/>
+            <text x="547" y="87" text-anchor="middle" font-size="18" font-weight="700" fill="#0a3d1f">GT</text>
+            <text x="547" y="108" text-anchor="middle" font-size="10" fill="#1a6b3a">Credited</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="flow-step">
+      <div class="step-num-col"><div class="step-circle">5</div></div>
+      <div class="step-content">
+        <div class="step-header"><span class="step-emoji">🛒</span><span class="step-title">Redeeming GreenTokens for Real Benefits</span></div>
+        <p class="step-desc">
+          The household opens their mobile wallet app. They see their GT balance, a history of how each token was earned, and a redemption menu. Redemption is supported by government policy — meaning these tokens are accepted at the local ration shop, the LPG gas distributor, and the primary health center, just like a government coupon. This tangible, immediate value is what makes behavior change stick in the long run.
+        </p>
+        <div class="step-box">
+          <h5>Token earning rates (sample)</h5>
+          <div class="step-items">
+            <div class="step-item">Daily toilet usage (verified) → <strong>2 GT/day</strong></div>
+            <div class="step-item">Per litre of water saved vs. standard flush → <strong>0.5 GT</strong></div>
+            <div class="step-item">Per 0.1 m³ biogas produced → <strong>5 GT</strong></div>
+            <div class="step-item">Maintenance issue reported + resolved → <strong>15 GT</strong></div>
+            <div class="step-item">Health module completed → <strong>10 GT</strong></div>
+            <div class="step-item">7-day usage streak → <strong>20 GT bonus</strong></div>
+            <div class="step-item">30-day usage streak → <strong>80 GT bonus</strong></div>
+            <div class="step-item">Hygiene self-check logged weekly → <strong>5 GT</strong></div>
+          </div>
+        </div>
+        <div class="step-box">
+          <h5>Redemption options (government-backed)</h5>
+          <div class="step-items">
+            <div class="step-item">100 GT = ₹50 credit at ration shop (rice, dal, oil)</div>
+            <div class="step-item">200 GT = ₹100 off LPG cylinder refill</div>
+            <div class="step-item">150 GT = 1 month school textbook fee waived</div>
+            <div class="step-item">100 GT = free primary health center consultation</div>
+            <div class="step-item">300 GT = ₹150 electricity bill credit</div>
+            <div class="step-item">500 GT = agricultural input subsidy (seeds/fertilizer)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 6: WATER SCARCITY DEEP DIVE ═══════════ -->
+<div class="section">
+  <div class="section-label">Section 06</div>
+  <div class="section-title">Addressing Water Scarcity — A Special Focus</div>
+  <p class="section-intro">The new abstract specifically highlights water scarcity as a key barrier — one the original framework didn't fully address. Here's how the updated system tackles it at three levels.</p>
+
+  <div class="three-col">
+    <div class="step-box" style="margin:0;">
+      <h5>🔩 Hardware level</h5>
+      <div style="font-size:13px; color:var(--ink); line-height:1.7;">
+        <p style="margin-bottom:8px;"><strong>Low-flush adapters</strong> retrofit existing toilet cisterns to use 2–3L per flush instead of 8–10L.</p>
+        <p style="margin-bottom:8px;"><strong>Pour-flush sensor</strong> detects a pour-flush event (jug of water used directly) and logs it as a valid usage — no cistern needed.</p>
+        <p><strong>Dry-pit sensor</strong> for fully waterless eco-sanitation units in the most water-stressed areas — detects pit usage via weight sensor with zero water requirement.</p>
+      </div>
+    </div>
+    <div class="step-box" style="margin:0;">
+      <h5>📱 Software level</h5>
+      <div style="font-size:13px; color:var(--ink); line-height:1.7;">
+        <p style="margin-bottom:8px;"><strong>Water efficiency dashboard</strong> shows each household how many litres they saved this week vs. a standard flush baseline.</p>
+        <p style="margin-bottom:8px;"><strong>Bonus tokens</strong> awarded per litre saved — making water-efficient toilet use more rewarding than regular flushing.</p>
+        <p><strong>Seasonal adjustment</strong>: during water-stress months (March–May in Tamil Nadu), token weights for water-saving behaviour automatically increase, acknowledging the greater sacrifice.</p>
+      </div>
+    </div>
+    <div class="step-box" style="margin:0;">
+      <h5>🏘 Community level</h5>
+      <div style="font-size:13px; color:var(--ink); line-height:1.7;">
+        <p style="margin-bottom:8px;"><strong>Village water-saved leaderboard</strong> — total community litres saved per month displayed on community board. Collective milestone (e.g., 10,000 litres saved) triggers a community water storage facility grant.</p>
+        <p><strong>Rainwater harvesting integration</strong>: panchayats that link toilet water supply to a rooftop rainwater tank get an infrastructure grant coded into the smart contract — triggered when tank installation is verified on-chain.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote-block" style="margin-top:20px;">
+    <p>"In a pour-flush toilet, a household member uses a jug of 1–2 litres of water to flush waste — compared to 6–10 litres in a cistern flush. Over a family of five using the toilet twice a day, this saves up to 80 litres per day — equivalent to 4 large buckets of water that can now go to drinking or cooking."</p>
+    <cite>— Design rationale: UNICEF/WHO pour-flush toilet standards for South Asia</cite>
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 7: TECH STACK ═══════════ -->
+<div class="section section-alt">
+  <div class="section-label">Section 07</div>
+  <div class="section-title">Technology Stack — What Powers the System</div>
+  <p class="section-intro">Seven layers of technology work together. Each one is chosen for reliability in low-resource, low-connectivity rural Indian environments.</p>
+
+  <div class="tech-grid">
+    <div class="tech-card l1">
+      <div class="tech-layer">Layer 1 — Physical Sensing</div>
+      <div class="tech-name">🔧 IoT Hardware</div>
+      <div class="tech-desc">Raspberry Pi / ESP32 sensor nodes with flow meters, ultrasonic distance sensors (for pour-flush detection), MQ-4 gas sensors (biogas), door-open reed switches, and weight pads. Low-power (~3W), weatherproof casing. Cost: ~₹2,800/unit.</div>
+      <span class="tech-code">ESP32 · LoRa · RS-485</span>
+    </div>
+    <div class="tech-card l2">
+      <div class="tech-layer">Layer 2 — Connectivity</div>
+      <div class="tech-name">📶 Resilient Transmission</div>
+      <div class="tech-desc">MQTT over 4G/WiFi with LoRaWAN fallback for areas with no cellular. Offline-first: stores up to 7 days of data locally on the sensor node if internet fails, syncs automatically when reconnected. Works on 2G GPRS in most remote cases.</div>
+      <span class="tech-code">MQTT · LoRaWAN · AWS IoT</span>
+    </div>
+    <div class="tech-card l3">
+      <div class="tech-layer">Layer 3 — Blockchain</div>
+      <div class="tech-name">⛓ Distributed Ledger</div>
+      <div class="tech-desc">Hyperledger Fabric (government-permissioned nodes at block, district, and state level) or Polygon PoS (public chain, low gas fees). All usage, maintenance, community, and water-efficiency data stored immutably. ~3s confirmation time.</div>
+      <span class="tech-code">Hyperledger Fabric · Polygon · IPFS</span>
+    </div>
+    <div class="tech-card l4">
+      <div class="tech-layer">Layer 4 — Incentive Logic</div>
+      <div class="tech-name">📜 Smart Contracts</div>
+      <div class="tech-desc">ERC-20 GreenToken (GT) contracts coded in Solidity. Multi-variable reward formula: usage + water efficiency + resource recovery + maintenance + health education. Audited, open-source. Anti-gaming: anomaly detection flags suspicious sensor spikes.</div>
+      <span class="tech-code">Solidity · ERC-20 · Chainlink</span>
+    </div>
+    <div class="tech-card l5">
+      <div class="tech-layer">Layer 5 — Application</div>
+      <div class="tech-name">📱 Mobile App + Portals</div>
+      <div class="tech-desc">React Native Android app (Tamil/Telugu/Hindi, voice-guided for low-literacy users). Features: wallet, issue reporting, health modules, community score, redemption QR codes. Government admin web portal shows real-time district-wide sanitation dashboard.</div>
+      <span class="tech-code">React Native · Node.js · GraphQL</span>
+    </div>
+    <div class="tech-card l6">
+      <div class="tech-layer">Layer 6 — Community Interface</div>
+      <div class="tech-name">🏘 Community Dashboard</div>
+      <div class="tech-desc">Weekly printed report (auto-generated PDF from blockchain data, printed at panchayat office) for households without smartphones. Digital village kiosk version for gram sabha meetings. Village ODF score, top households, water saved this month, pending maintenance issues.</div>
+      <span class="tech-code">Python · LibreOffice · Grafana</span>
+    </div>
+    <div class="tech-card l7">
+      <div class="tech-layer">Layer 7 — Analytics</div>
+      <div class="tech-name">📊 Data Intelligence</div>
+      <div class="tech-desc">ML model predicts which households are at risk of reverting to OD (based on usage frequency drop) and triggers targeted outreach. Correlation analysis of sanitation data vs. local health records submitted to government quarterly.</div>
+      <span class="tech-code">Python · TensorFlow Lite · PostgreSQL</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 8: ROADMAP ═══════════ -->
+<div class="section">
+  <div class="section-label">Section 08</div>
+  <div class="section-title">18-Month Development Roadmap</div>
+  <p class="section-intro">Each phase produces verifiable deliverables before the next begins. Social acceptance and community co-design are built into every phase — not added at the end.</p>
+
+  <div class="roadmap-phases">
+    <div class="phase p1">
+      <div class="phase-head">Phase 1</div>
+      <div class="phase-body">
+        <div class="phase-months">Months 1–2</div>
+        <ul class="phase-tasks">
+          <li>Household interviews on barriers</li>
+          <li>Water usage baseline survey</li>
+          <li>Toilet usability assessment</li>
+          <li>Community focus groups</li>
+          <li>SBM/ODF policy mapping</li>
+          <li>Tech stack decision</li>
+        </ul>
+      </div>
+    </div>
+    <div class="phase p2">
+      <div class="phase-head">Phase 2</div>
+      <div class="phase-body">
+        <div class="phase-months">Months 2–4</div>
+        <ul class="phase-tasks">
+          <li>Multi-input blockchain design</li>
+          <li>Token formula with water-saving</li>
+          <li>Maintenance reporting UX</li>
+          <li>Community score algorithm</li>
+          <li>Low-flush sensor spec</li>
+          <li>Privacy &amp; data governance</li>
+        </ul>
+      </div>
+    </div>
+    <div class="phase p3">
+      <div class="phase-head">Phase 3</div>
+      <div class="phase-body">
+        <div class="phase-months">Months 4–9</div>
+        <ul class="phase-tasks">
+          <li>Deploy blockchain testnet</li>
+          <li>Smart contract audit</li>
+          <li>IoT firmware (multi-sensor)</li>
+          <li>Android app (voice UI)</li>
+          <li>Govt admin dashboard</li>
+          <li>Community PDF report gen</li>
+        </ul>
+      </div>
+    </div>
+    <div class="phase p4">
+      <div class="phase-head">Phase 4</div>
+      <div class="phase-body">
+        <div class="phase-months">Months 9–13</div>
+        <ul class="phase-tasks">
+          <li>Sensors in 50 pilot HH</li>
+          <li>Low-flush retrofits installed</li>
+          <li>Community training sessions</li>
+          <li>Health modules launched</li>
+          <li>Maintenance flow tested</li>
+          <li>Govt MOU + token pilot</li>
+        </ul>
+      </div>
+    </div>
+    <div class="phase p5">
+      <div class="phase-head">Phase 5</div>
+      <div class="phase-body">
+        <div class="phase-months">Months 13–18</div>
+        <ul class="phase-tasks">
+          <li>Social acceptance measurement</li>
+          <li>Water savings quantification</li>
+          <li>Community score impact study</li>
+          <li>Contract upgrades from field</li>
+          <li>Scale architecture review</li>
+          <li>Research paper finalisation</li>
+        </ul>
+      </div>
+    </div>
+    <div class="phase p6">
+      <div class="phase-head">Phase 6</div>
+      <div class="phase-body">
+        <div class="phase-months">Months 18–24</div>
+        <ul class="phase-tasks">
+          <li>District-wide rollout</li>
+          <li>Token redemption network live</li>
+          <li>Village health corr. study</li>
+          <li>Train local VLEs + volunteers</li>
+          <li>Self-sustaining model</li>
+          <li>Replicate in other states</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>⚡ Research prototype (6–9 months):</strong> For academic proof-of-concept, simulate sensor data on a testnet, run token economy with 15–20 volunteer households, and demonstrate the app + maintenance reporting + community score dashboard with synthetic data. All four pillars can be validated as a system prototype within this window.
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 9: EXPECTED IMPACT ═══════════ -->
+<div class="section section-alt">
+  <div class="section-label">Section 09</div>
+  <div class="section-title">Expected Outcomes &amp; Impact</div>
+  <p class="section-intro">This framework targets measurable improvement across sanitation usage, water conservation, infrastructure upkeep, and community health — with long-term sustainability built into the model from Day 1.</p>
+
+  <div class="impact-grid">
+    <div class="impact-card green">
+      <div class="impact-num">85%+</div>
+      <div class="impact-label">Social Acceptance Rate</div>
+      <div class="impact-sub">Consistent toilet usage sustained over 6+ months — the true measure of social acceptance, not just infrastructure availability</div>
+    </div>
+    <div class="impact-card teal">
+      <div class="impact-num">60%</div>
+      <div class="impact-label">Water Use Reduction</div>
+      <div class="impact-sub">Per toilet usage event vs. standard cistern flush — through low-flush retrofits and pour-flush adoption</div>
+    </div>
+    <div class="impact-card gold">
+      <div class="impact-num">&lt;3 days</div>
+      <div class="impact-label">Avg. Maintenance Resolution</div>
+      <div class="impact-sub">From issue reported to verified fix — vs. weeks or months with no accountability system in place</div>
+    </div>
+    <div class="impact-card blue">
+      <div class="impact-num">₹10,000+</div>
+      <div class="impact-label">Annual Benefit/Household</div>
+      <div class="impact-sub">Tokens + fuel savings + fertilizer income + health cost avoidance — real economic return for adopting sanitation</div>
+    </div>
+  </div>
+
+  <div class="chips">
+    <span class="chip">Blockchain Incentives</span>
+    <span class="chip">Open Defecation Free</span>
+    <span class="chip">Sustainable Sanitation</span>
+    <span class="chip">Social Acceptance</span>
+    <span class="chip">Water Scarce Regions</span>
+    <span class="chip">Token Rewards</span>
+    <span class="chip">Maintenance Accountability</span>
+    <span class="chip">Community Tracking</span>
+    <span class="chip">Swachh Bharat Mission</span>
+    <span class="chip">IoT Sensors</span>
+    <span class="chip">Smart Contracts</span>
+    <span class="chip">Behavioral Change</span>
+    <span class="chip">Rural India</span>
+    <span class="chip">Resource Recovery</span>
+  </div>
+</div>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<div class="footer">
+  <div>
+    <strong>Blockchain-Enabled Monitoring &amp; Incentive Framework for Sustainable Sanitation</strong><br>
+    Focus: Social Acceptance · Water Scarcity · Maintenance Accountability · Community Tracking
+  </div>
+  <div style="text-align: right;">
+    <strong>Beginner-to-Expert Full Poster · v2.0</strong><br>
+    Blockchain · IoT · Token Economy · Behavioral Design · Rural India
+  </div>
+</div>
+
+</div><!-- end poster -->
+</body>
+</html>
